@@ -54,7 +54,13 @@ void main(void)
 	system("clear");
 	printf("Booting the kernel....\n");
 	sleep(3); // just resting, yes i am working here.
-	printf("Kernel successfully booted!\n");
+	printf("Kernel successfully booted!\n\n");
+	sleep(1);
+	system("clear");
+	printf("--Welcome to HydrOS--\n");
+	printf("  ---Version %.1f---  \n\n ", HYDROS_VER);
+	sleep(3);
+	system("clear");
 	prompt();
 }
 
@@ -104,7 +110,7 @@ int prompt()
 	}
 	else // if the command is not valid....
 	{
-		printf("Command not found!\n");
+		printf("%s: Command not found!\n", cmd);
 		prompt();
 	}
 	return 0;
